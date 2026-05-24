@@ -9,7 +9,6 @@ import { useNewsModal } from "@/zustand/allState";
 import { Trash2, ExternalLink, PencilIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 import AddNewsModal from "./AddNewsModal";
-import { useEffect } from "react";
 
 export default function AddNewsClient() {
   const router = useRouter();

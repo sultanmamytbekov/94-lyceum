@@ -1,0 +1,16 @@
+{
+  "header": {
+    "contacts": "Контакты",
+    "about": "О нас",
+    "professions": "Профессии",
+    "home": "Главная",
+    "advantages": "Преимущества",
+    "documents": "Документы",
+    "news": "Новости"
+  },
+
+  "hero": {
+    "apply": "Поступить",
+    "details": "Подробнее"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "header": {
+    "contacts": "Contacts",
+    "about": "About us",
+    "professions": "Professions",
+    "home": "Home",
+    "advantages": "Advantages",
+    "documents": "Documents",
+    "news": "News"
+  },
+
+  "hero": {
+    "apply": "Apply",
+    "details": "Details"
+  }
+}

@@ -1,23 +1,25 @@
 "use client";
+
 import { useGetAllNewsQuery } from "@/app/redux/api/news/news";
 import { useRouter } from "next/navigation";
 import { Calendar } from "lucide-react";
 import { useState, useMemo } from "react";
+import Header from "@/app/components/Header/Header";
+import beg from "../../components/ChooseUs/image/mainLogo2.png";
+import { useParams } from "next/navigation";
 
 export default function NewsClient() {
   const router = useRouter();
   const { isLoading, data } = useGetAllNewsQuery();
+  const params = useParams();
+  const [selectedEvent, setSelectedEvent] = useState("Все");
 
-  const [selectedEvent, setSelectedEvent] = useState<string>("Все");
-
-  // Получаем уникальные категории event
   const events = useMemo(() => {
     if (!data) return [];
     const unique = Array.from(new Set(data.map((item) => item.event)));
     return ["Все", ...unique];
   }, [data]);
 
-  // Фильтрация
   const filteredNews = useMemo(() => {
     if (!data) return [];
     if (selectedEvent === "Все") return data;
@@ -26,92 +28,157 @@ export default function NewsClient() {
 
   return (
     <>
-    <article className="w-full px-4">
+      <Header />
 
-      {/* HEADER + FILTER */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 p-4">
+      <div className="h-[106px]" />
 
-        {/* Title */}
-        <h1 className="text-[22px] text-black font-semibold">
-          Новости
-        </h1>
-
-        {/* Filters */}
-        <div className="flex flex-wrap gap-2">
-          {events.map((event) => (
-            <button
-              key={event}
-              onClick={() => setSelectedEvent(event)}
-              className={`px-3 py-1.5 rounded-full text-[12px] transition
-                ${
-                  selectedEvent === event
-                    ? "bg-blue-600 text-white shadow"
-                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                }
-              `}
+      <main
+        className="min-h-screen py-10"
+        style={{
+          backgroundImage: `url(${beg.src})`,
+        }}
+      >
+        <article className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+          {/* Заголовок */}
+          <div className="mb-10">
+            <h1
+              className="
+                text-[#003878]
+                text-[42px]
+                sm:text-[54px]
+                md:text-[64px]
+                leading-none
+                mb-6
+              "
             >
-              {event}
-            </button>
-          ))}
-        </div>
+              Новости
+            </h1>
 
-      </div>
+            {/* Фильтры */}
+            <div className="flex flex-wrap gap-3">
+              {events.map((event) => (
+                <button
+                  key={event}
+                  onClick={() => setSelectedEvent(event)}
+                  className={`
+                    px-4
+                    py-2
+                    rounded-full
+                    text-sm
+                    transition
+                    ${selectedEvent === event
+                      ? "bg-[#003B8F] text-white shadow-lg"
+                      : "bg-white text-[#003B8F] border border-[#003B8F]/20 hover:bg-[#003B8F]/5"
+                    }
+                  `}
+                >
+                  {event}
+                </button>
+              ))}
+            </div>
+          </div>
 
-      {/* GRID */}
-      <div className="grid grid-cols-1 pb-5 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {/* Новости */}
+          <div
+            className="
+              grid
+              grid-cols-1
+              sm:grid-cols-2
+              lg:grid-cols-3
+              gap-8
+              pb-10
+            "
+          >
+            {isLoading
+              ? [1, 2, 3, 4, 5, 6].map((item) => (
+                <div
+                  key={item}
+                  className="
+                      bg-white
+                      rounded-[24px]
+                      shadow-[0_10px_25px_rgba(0,0,0,0.12)]
+                      overflow-hidden
+                    "
+                >
+                  <div className="w-full h-56 bg-gray-300 animate-pulse"></div>
 
-        {isLoading
-          ? [1, 2, 3, 4].map((item) => (
-              <div
-                key={item}
-                className="bg-white rounded-lg shadow-sm overflow-hidden"
-              >
-                <div className="w-full h-[140px] bg-gray-300 animate-pulse"></div>
-                <div className="p-4 space-y-2">
-                  <div className="w-[100px] h-[10px] bg-gray-300 rounded animate-pulse"></div>
-                  <div className="w-[80%] h-[16px] bg-gray-300 rounded animate-pulse"></div>
-                  <div className="w-full h-[12px] bg-gray-300 rounded animate-pulse"></div>
-                </div>
-              </div>
-            ))
-          : filteredNews.map((article) => (
-              <div
-                key={article.id}
-                onClick={() => router.push(`/modalnewsblock/${article.id}`)}
-                className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition cursor-pointer"
-              >
-                <img
-                  src={article.images?.[0]}
-                  alt={article.title}
-                  className="w-full h-48 object-cover"
-                />
-
-                <div className="p-4">
-
-                  <div className="flex items-center justify-between text-[11px] text-gray-500 mb-2">
-                    <span className="flex items-center gap-1">
-                      <Calendar className="w-3 h-3" />
-                      {article.eventDate}
-                    </span>
-
-                    <span className="px-2 py-[2px] bg-blue-100 text-blue-600 rounded text-[10px]">
-                      {article.event}
-                    </span>
+                  <div className="p-5 space-y-3">
+                    <div className="w-[120px] h-[12px] bg-gray-300 rounded animate-pulse"></div>
+                    <div className="w-[80%] h-[20px] bg-gray-300 rounded animate-pulse"></div>
+                    <div className="w-full h-[14px] bg-gray-300 rounded animate-pulse"></div>
                   </div>
-
-                  <h2 className="text-[16px] text-black font-semibold leading-snug mb-2">
-                    {article.title}
-                  </h2>
-
-                  <p className="text-gray-600 text-[13px] line-clamp-2">
-                    {article.descriptions?.[0]}
-                  </p>
-
                 </div>
+              ))
+              : filteredNews.map((article) => (
+                <div
+                  key={article.id}
+                  onClick={() =>
+                    router.push(`/${params.locale}/modalnewsblock/${article.id}`)
+                    }
+            className="
+            bg-white/95
+            rounded-[24px]
+            shadow-[0_10px_25px_rgba(0,0,0,0.12)]
+            overflow-hidden
+            hover:-translate-y-1
+            hover:shadow-[0_15px_35px_rgba(0,0,0,0.18)]
+            transition-all
+            duration-300
+            cursor-pointer
+            "
+                  >
+            <img
+              src={article.images?.[0]}
+              alt={article.title}
+              className="
+                        w-full
+                        h-56
+                        object-cover
+                      "
+            />
+
+            <div className="p-5">
+              <div className="flex items-center justify-between text-[12px] text-gray-500 mb-3">
+                <span className="flex items-center gap-1">
+                  <Calendar className="w-4 h-4" />
+                  {article.eventDate}
+                </span>
+
+                <span
+                  className="
+                            px-3
+                            py-1
+                            bg-[#003B8F]
+                            text-white
+                            rounded-full
+                            text-[11px]
+                          "
+                >
+                  {article.event}
+                </span>
               </div>
-            ))}
-      </div>
-    </article>
+
+              <h2
+                className="
+                          text-[18px]
+                          text-[#003B8F]
+                          font-semibold
+                          leading-snug
+                          mb-3
+                        "
+              >
+                {article.title}
+              </h2>
+
+              <p className="text-gray-600 text-[14px] line-clamp-3 leading-6">
+                {article.descriptions?.[0]}
+              </p>
+            </div>
+          </div>
+                ))}
+        </div>
+      </article>
+    </main >
     </>
   );
 }

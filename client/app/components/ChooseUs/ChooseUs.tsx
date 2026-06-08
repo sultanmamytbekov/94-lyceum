@@ -1,7 +1,7 @@
 "use client";
 
 import beg from "./image/mainLogo2.png";
-
+import Link from "next/link"; 
 export default function ChooseUs() {
   const items = [
     {
@@ -161,17 +161,18 @@ export default function ChooseUs() {
                   сотрудничает с работодателями.
                 </p>
 
-                <button
+                <Link
+                  href="/ru/about"  
                   className="
-                  mt-5
-                  text-[#0057FF]
-                  text-[16px]
-                  hover:underline
-                "
-
+    mt-5
+    inline-block
+    text-[#0057FF]
+    text-[16px]
+    hover:underline
+  "
                 >
                   Подробнее...
-                </button>
+                </Link>
               </div>
             </div>
           </div>

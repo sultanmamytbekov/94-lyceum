@@ -1,24 +1,27 @@
 "use client";
 
 import beg from "./image/mainLogo2.png";
-import Link from "next/link"; 
+import Link from "next/link";
+import { useTranslations, useLocale } from "next-intl";
 export default function ChooseUs() {
+  const t = useTranslations("chooseUs");
+  const locale = useLocale();
   const items = [
     {
-      title: "Бесплатное обучение",
-      text: "Поступление после 9 или 11 класса.\nВы получаете аттестат\nи государственный диплом.",
+      title: t("card1.title"),
+      text: t("card1.text"),
     },
     {
-      title: "Бесплатное проживание",
-      text: "У нас есть большое общежитие\nрядом с лицеем для 400+ студентов",
+      title: t("card2.title"),
+      text: t("card2.text"),
     },
     {
-      title: "Стипендия",
-      text: "Студенты получают стипендию\nза успеваемость каждую\nмесяц регулярно",
+      title: t("card3.title"),
+      text: t("card3.text"),
     },
     {
-      title: "Отсрочка от армии",
-      text: "Мальчики призывного возраста\nосвобождаются от службы\nна время обучения.",
+      title: t("card4.title"),
+      text: t("card4.text"),
     },
   ];
 
@@ -44,7 +47,7 @@ export default function ChooseUs() {
           "
 
         >
-          Почему выбирают именно нас?
+          {t("title")}
         </h2>
 
         {/* Cards */}
@@ -126,7 +129,7 @@ export default function ChooseUs() {
                 fontFamily: "sans-serif",
               }}
             >
-              О нас
+              {t("aboutTitle")}
             </h2>
 
 
@@ -154,15 +157,11 @@ export default function ChooseUs() {
                 "
 
                 >
-                  Профессиональный лицей №94 — это современное учебное
-                  заведение, готовящее специалистов в сфере IT, дизайна,
-                  сервиса и технических профессий. Основан в 1972 году,
-                  сегодня лицей активно внедряет новые технологии и
-                  сотрудничает с работодателями.
+                  {t("aboutText")}
                 </p>
 
                 <Link
-                  href="/ru/about"  
+                  href={`/${locale}/about`}
                   className="
     mt-5
     inline-block
@@ -171,7 +170,7 @@ export default function ChooseUs() {
     hover:underline
   "
                 >
-                  Подробнее...
+                  {t("more")}
                 </Link>
               </div>
             </div>

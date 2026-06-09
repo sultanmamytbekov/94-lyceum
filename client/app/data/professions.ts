@@ -30,7 +30,7 @@ export const professions = [
     {
         id: "graphic-designer",
 
-        title: "Чем занимается графический \n дизайнер?",
+        title: "graphicDesigner.title",
         image: graphicImg,
         image1: graphicImg1,
         background: graphicBg,
@@ -50,7 +50,7 @@ export const professions = [
     {
         id: "web-developer",
 
-        title: "Что делает веб‑разработчик?",
+        title: "webDeveloper.title",
 
         image: webImg,
         image1: webImg1,
@@ -72,7 +72,7 @@ export const professions = [
     {
         id: "barber",
 
-        title: "Что делает парикмахер?",
+        title: "barber.title",
 
         image: barberImg,
         image1: barberImg1,
@@ -94,7 +94,7 @@ export const professions = [
     {
         id: "repair",
 
-        title: "Чем занимается мастер по ремонту техники?",
+        title: "repair.title",
 
         image: repairImg,
         image1: repairImg1,
@@ -117,7 +117,7 @@ export const professions = [
     {
         id: "sewing",
 
-        title: "Что делает швея‑кройщик?",
+        title: "sewing.title",
 
         image: sewingImg,
         image1: sewingImg1,
@@ -140,7 +140,7 @@ export const professions = [
     {
         id: "system-admin",
 
-        title: "Кто такой системный администратор?",
+        title: "systemAdmin.title",
 
         image: adminImg,
         image1: adminImg1,

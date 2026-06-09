@@ -8,9 +8,74 @@
     "documents": "Documents",
     "news": "News"
   },
-
   "hero": {
     "apply": "Apply",
     "details": "Details"
+  },
+  "chooseUs": {
+    "title": "Why Choose Us?",
+    "card1": {
+      "title": "Free Education",
+      "text": "Admission after 9th or 11th grade.\nYou receive a certificate\nand a state diploma."
+    },
+    "card2": {
+      "title": "Free Accommodation",
+      "text": "We provide a large dormitory\nnear the lyceum for more than 400 students"
+    },
+    "card3": {
+      "title": "Scholarship",
+      "text": "Students receive a monthly\nscholarship for good\nacademic performance"
+    },
+    "card4": {
+      "title": "Military Service Deferment",
+      "text": "Male students of draft age\nare exempt from military service\nduring their studies."
+    },
+    "aboutTitle": "About Us",
+    "aboutText": "Professional Lyceum No. 94 is a modern educational institution that trains specialists in IT, design, services, and technical professions. Founded in 1972, the lyceum actively implements new technologies and cooperates with employers.",
+    "more": "Read more..."
+  },
+  "professions": {
+    "sectionTitle": "You can get a profession in the following fields:",
+    "graphicDesigner": {
+      "title": "What does a Graphic Designer do?"
+    },
+    "webDeveloper": {
+      "title": "What does a Web Developer do?"
+    },
+    "barber": {
+      "title": "What does a Barber do?"
+    },
+    "repair": {
+      "title": "What does an Appliance Repair Technician do?"
+    },
+    "sewing": {
+      "title": "What does a Tailor do?"
+    },
+    "systemAdmin": {
+      "title": "Who is a System Administrator?"
+    }
+  },
+  "documents": {
+    "title": "List of Documents Required for Admission",
+    "list": {
+      "application": "Application addressed\nto the Director",
+      "educationDocument": "Original education\ndocument",
+      "medicalCertificate": "Medical certificate\n(Form 086)",
+      "residenceCertificate": "Residence certificate\n(address and family composition)",
+      "passportCopy": "Copy of passport or\nbirth certificate",
+      "parentPassport": "Copy of one parent's\npassport",
+      "photos": "6 photos\n3×4 cm",
+      "militaryDocument": "Copy of military registration\ncertificate or military ID"
+    }
+  },
+  "partners": {
+    "title": "Our Partners"
+  },
+  "footer": {
+    "name": "Professional Lyceum No. 94",
+    "address": "30 Kupyanskaya St., Bishkek",
+    "contacts": "Contacts",
+    "instagram": "Follow us on Instagram",
+    "copyright": "© 2025 Professional Lyceum No. 94. All rights reserved."
   }
 }

@@ -1,44 +1,47 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 export default function DocumentsSection() {
+  const t = useTranslations("documents");
+
   const documents = [
     {
       icon: "🖊️",
-      text: "Заявление,\nадресованное директору",
+      textKey: "list.application",
     },
     {
       icon: "📄",
-      text: "Оригинал документа\nоб образовании",
+      textKey: "list.educationDocument",
     },
     {
       icon: "🏥",
-      text: "Медицинская\nсправка по форме 086",
+      textKey: "list.medicalCertificate",
     },
     {
       icon: "🏠",
-      text: "Справка с места жительства\n(адрес и состав семьи)",
+      textKey: "list.residenceCertificate",
     },
     {
       icon: "🆔",
-      text: "Копия паспорта или\nсвидетельства о рождении",
+      textKey: "list.passportCopy",
     },
     {
       icon: "👨‍👩‍👦",
-      text: "Копия паспорта\nодного из родителей",
+      textKey: "list.parentPassport",
     },
     {
       icon: "📸",
-      text: "6 фотографий 3×4 см",
+      textKey: "list.photos",
     },
     {
       icon: "🎖️",
-      text: "Копия приписного свидетельства\nили военного билета",
+      textKey: "list.militaryDocument",
     },
   ];
 
   return (
     <section className="w-full py-[40px] md:py-[80px] px-3 md:px-4">
-      {/* основной блок */}
       <div
         className="
           max-w-[1550px]
@@ -55,7 +58,6 @@ export default function DocumentsSection() {
           md:py-[55px]
         "
       >
-        {/* title */}
         <div
           className="
             flex
@@ -68,9 +70,7 @@ export default function DocumentsSection() {
             flex-wrap
           "
         >
-          <span className="text-[22px] md:text-[34px]">
-            📋
-          </span>
+          <span className="text-[22px] md:text-[34px]">📋</span>
 
           <h2
             className="
@@ -87,15 +87,12 @@ export default function DocumentsSection() {
               fontFamily: "sans-serif",
             }}
           >
-            Перечень документов для поступления
+            {t("title")}
           </h2>
 
-          <span className="text-[22px] md:text-[34px]">
-            📋
-          </span>
+          <span className="text-[22px] md:text-[34px]">📋</span>
         </div>
 
-        {/* list */}
         <div
           className="
             flex
@@ -137,7 +134,6 @@ export default function DocumentsSection() {
                 cursor-pointer
               "
             >
-              {/* icon */}
               <span
                 className="
                   text-[16px]
@@ -150,7 +146,6 @@ export default function DocumentsSection() {
                 {item.icon}
               </span>
 
-              {/* text */}
               <p
                 className="
                   text-[#1A1A1A]
@@ -168,7 +163,7 @@ export default function DocumentsSection() {
                   fontFamily: "sans-serif",
                 }}
               >
-                {item.text}
+                {t(item.textKey)}
               </p>
             </div>
           ))}

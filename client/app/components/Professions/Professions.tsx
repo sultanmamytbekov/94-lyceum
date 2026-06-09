@@ -4,9 +4,11 @@ import Image from "next/image";
 import bgImage from "./images/bg.png";
 import Link from "next/link";
 import { professions } from "@/app/data/professions";
+import { useTranslations, useLocale } from "next-intl";
 
 export default function ProfessionSection() {
-
+  const t = useTranslations("professions");
+  const locale = useLocale();
   return (
     <section
       className="
@@ -76,7 +78,7 @@ export default function ProfessionSection() {
             fontFamily: "sans-serif",
           }}
         >
-          У нас вы можете получить профессию в следующих направлениях:
+          {t("sectionTitle")}
         </h2>
 
         {/* cards */}
@@ -93,7 +95,7 @@ export default function ProfessionSection() {
         >
           {professions.map((item, index) => (
             <Link
-              href={`/professions/${item.id}`}
+              href={`/${locale}/professions/${item.id}`}
               key={index}
               className="
               relative
@@ -101,7 +103,7 @@ export default function ProfessionSection() {
               h-[441px]
               flex
               items-center
-              justify-center"        
+              justify-center"
             >
               {/* задний прозрачный блок */}
               <div
@@ -153,7 +155,7 @@ export default function ProfessionSection() {
                       paintOrder: "stroke fill",
                     }}
                   >
-                    {item.title}
+                    {t(item.title)}
                   </h3>
                 </div>
 

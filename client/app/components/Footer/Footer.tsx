@@ -4,8 +4,9 @@ import Image from 'next/image';
 import logo from './image/Logo.svg';
 import qr from './image/qr-code.png';
 import { Phone } from 'lucide-react';
-
+import { useTranslations } from "next-intl";
 export default function Footer() {
+  const t = useTranslations("footer");
     return (
         <footer className="w-full bg-[#565656] text-white">
             <div className="mx-auto max-w-[1200px] px-6 py-10 md:px-12 md:py-14">
@@ -24,18 +25,18 @@ export default function Footer() {
             />
 
             <p className="text-[18px] font-bold leading-[24px]">
-              Профессиональный лицей №94
+              {t("name")}
             </p>
 
             <p className="text-[18px] font-bold leading-[24px]">
-              г. Бишкек, ул. Купянская 30
+              {t("address")}
             </p>
           </div>
 
           {/* CENTER */}
           <div>
             <div className="mb-4 mt-8 flex items-center gap-2">
-              <h3 className="text-[22px] font-bold">Контакты</h3>
+              <h3 className="text-[22px] font-bold">{t("contacts")}</h3>
 
               {/* <Phone size={20} /> */}
             </div>
@@ -50,7 +51,7 @@ export default function Footer() {
           {/* RIGHT */}
           <div>
             <h3 className="text-[22px] mt-8 leading-[30px]">
-              <span className="font-bold">Мы в</span> Instagram
+              <span className="font-bold">{t("instagram")}</span> Instagram
             </h3>
 
             <div className="mt-1 flex items-center gap-2">
@@ -157,7 +158,7 @@ export default function Footer() {
                 {/* BOTTOM */}
                 <div className="mt-10 text-center">
                     <p className="text-[14px] text-white/80 md:text-[18px]">
-                        © 2025 Профессиональный лицей №94. Все права защищены.
+                        {t("copyright")}
                     </p>
                 </div>
             </div>

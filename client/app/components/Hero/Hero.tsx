@@ -4,9 +4,11 @@ import { useState } from 'react';
 
 import logo from './image/Group 18.png'; // логотип
 import heroBg from './image/beg.png'; // задний фон
+import { useTranslations } from 'next-intl';
 
 export default function Hero() {
   const [isOpen, setIsOpen] = useState(false);
+  const t = useTranslations();
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -128,7 +130,7 @@ export default function Hero() {
                 // fontFamily: 'Nanum Myeongjo',
               }}
             >
-              Поступить
+              {t('hero.apply')}
             </button>
 
             {/* DETAILS BUTTON */}
@@ -157,7 +159,7 @@ export default function Hero() {
                 // fontFamily: 'Nanum Myeongjo',
               }}
             >
-              Подробнее
+              {t('hero.details')}
             </button>
           </div>
         </div>

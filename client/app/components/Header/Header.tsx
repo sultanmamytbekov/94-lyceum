@@ -41,7 +41,7 @@ export default function Header() {
   ];
   const router = useRouter();
   const pathname = usePathname();
-  const locale = useLocale();
+  // const locale = useLocale();
   const [active, setActive] = useState('home');
   const [menuOpen, setMenuOpen] = useState(false);
   const [showHeader, setShowHeader] = useState(true);
@@ -71,7 +71,7 @@ export default function Header() {
       setLogoClicks(0);
     }, 2000);
   };
-  useEffect(() => {
+  useEffect(() => { 
     const controlHeader = () => {
       const currentScrollY = window.scrollY;
 
@@ -99,7 +99,6 @@ export default function Header() {
       window.removeEventListener('scroll', controlHeader);
     };
   }, [lastScrollY]);
-
   useEffect(() => {
     const sections = navItems.map((item) =>
       document.getElementById(item.id)
@@ -472,7 +471,7 @@ export default function Header() {
                 <button
                   onClick={() => {
                     if (adminCode === "admin123") {
-                      router.push("/addnews");
+                      router.push("/addnews")
 
                       setShowAdminModal(false);
 

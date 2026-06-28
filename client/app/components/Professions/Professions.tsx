@@ -155,7 +155,7 @@ export default function ProfessionSection() {
                       paintOrder: "stroke fill",
                     }}
                   >
-                    {t(item.title)}
+                    {(item.titleBlock.title)}
                   </h3>
                 </div>
 

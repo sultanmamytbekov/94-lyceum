@@ -38,7 +38,7 @@ export default function NewsDetailClient({ params }: { params: Promise<{ id: str
       <div className="flex justify-center items-center h-screen">
         Новость не найдена
       </div>
-    );
+    );1
   }
 
   const mainVideo = article.video;

@@ -20,11 +20,11 @@ export const LanguageProvider = ({ children }: { children: React.ReactNode }) =>
     const el = document.getElementById(id);
     el?.scrollIntoView({ behavior: "smooth" });
   };
-
+//  https://69b1accaadac80b427c5f205.mockapi.io/sultanBase
   // ✅ ВОТ ТАК ПРАВИЛЬНО
   useEffect(() => {
     axios
-      .get("https://69b1accaadac80b427c5f205.mockapi.io/sultanBase")
+      .get("https://6a417d821ff1d27becc192ae.mockapi.io/94-Litseu/94_Litseu")
       .then((response) => {
         console.log("Fetched news:", response.data);
       })

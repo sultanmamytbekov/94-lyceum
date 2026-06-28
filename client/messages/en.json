@@ -16,43 +16,43 @@
     "title": "Why Choose Us?",
     "card1": {
       "title": "Free Education",
-      "text": "Admission after 9th or 11th grade.\nYou receive a certificate\nand a state diploma."
+      "text": "Applicants admitted after Grade 9 study for 2 years and receive a secondary education certificate together with a state-recognized diploma.\n\nApplicants admitted after Grade 11 study for 10 months and receive a state-recognized diploma."
     },
     "card2": {
       "title": "Free Accommodation",
-      "text": "We provide a large dormitory\nnear the lyceum for more than 400 students"
+      "text": "Students in need are provided with free accommodation in a fully equipped dormitory."
     },
     "card3": {
       "title": "Scholarship",
-      "text": "Students receive a monthly\nscholarship for good\nacademic performance"
+      "text": "The government provides scholarships for students with good academic performance. Orphans, children without parental care, and students requiring social support receive additional financial assistance and meal support."
     },
     "card4": {
       "title": "Military Service Deferment",
-      "text": "Male students of draft age\nare exempt from military service\nduring their studies."
+      "text": "Male students of draft age are granted a deferment from compulsory military service for the duration of their studies."
     },
     "aboutTitle": "About Us",
-    "aboutText": "Professional Lyceum No. 94 is a modern educational institution that trains specialists in IT, design, services, and technical professions. Founded in 1972, the lyceum actively implements new technologies and cooperates with employers.",
+    "aboutText": "History of the institution. City Vocational Technical School No. 20 (now Professional Lyceum No. 94) in the city of Frunze was established in 1965 by a decision of the Ministry of Public Services of the Kyrgyz SSR. Today, the lyceum is a modern educational institution that trains highly qualified specialists while combining many years of tradition with modern educational technologies.",
     "more": "Read more..."
   },
   "professions": {
-    "sectionTitle": "You can get a profession in the following fields:",
+    "sectionTitle": "You can obtain a profession in the following fields:",
     "graphicDesigner": {
-      "title": "What does a Graphic Designer do?"
+      "title": "Graphic \n Designer"
     },
     "webDeveloper": {
-      "title": "What does a Web Developer do?"
+      "title": "Web \n Developer"
     },
     "barber": {
-      "title": "What does a Barber do?"
+      "title": "Hairdresser"
     },
     "repair": {
-      "title": "What does an Appliance Repair Technician do?"
+      "title": "Home Appliance \n Repair Technician"
     },
     "sewing": {
-      "title": "What does a Tailor do?"
+      "title": "Tailor / Seamstress"
     },
     "systemAdmin": {
-      "title": "Who is a System Administrator?"
+      "title": "System \n Administrator"
     }
   },
   "documents": {
@@ -77,5 +77,42 @@
     "contacts": "Contacts",
     "instagram": "Follow us on Instagram",
     "copyright": "© 2025 Professional Lyceum No. 94. All rights reserved."
+  },
+  "about": {
+    "title": "About Us",
+    "text": "History of the Establishment and Development of the Educational Institution The Municipal Vocational Technical School No. 20 (now Vocational Lyceum No. 94) in the city of Frunze was established in 1965 by a decision of the Ministry of Consumer Services of the Kyrgyz SSR. Its primary mission was to train qualified skilled workers to provide services for the city's population. The institution offered training in a wide range of professions, including photographer, general hairdresser, watch repair technician, radio mechanic, gas equipment technician, pattern maker, and electric welder. Graduates were trained according to the workforce demands of the Ministry of Consumer Services. In 1976, by Order No. 176 of the State Committee of the Kyrgyz SSR for Vocational and Technical Education, dated August 18, 1976, the institution was reorganized into Technical School No. 7 (TS No. 7). Technical School No. 7 cooperated with the radio factory in Tokmok, as well as enterprises such as Rembytmash, KyrgyzbytRadiotekh, Kirgizgazifikatsiya, the Setun Plant of the Kyrgyz SSR, and the Ministry of Consumer Services. In 1984, the State Committee of the Kyrgyz SSR for Vocational and Technical Education transformed Technical School No. 7 into Secondary Vocational Technical School No. 94 (SVTS No. 94). Located within the city, SVTS No. 94 included several academic buildings, student dormitories, and its own repair workshops. In 1989, by decision of the Ministry of Public Education of the Kyrgyz SSR, SVTS No. 94 was renamed Vocational Technical School No. 94. The institution offered 1.5- and 2-year training programs in specialties such as industrial refrigeration repair technician, electromechanical technician for complex household appliance repair, weaver, pattern maker with sewing skills, and tailor. Students were provided with accommodation in dormitories and meals. In 2006, under a resolution of the Ministry of Labor and Social Development of the Kyrgyz Republic, the institution was reorganized and granted the status of Vocational Lyceum No. 94. During the same year, the duration of study was changed from two years to a 10-month program. Between 2011 and 2012, in cooperation with the Asian Development Bank project 'Vocational Education and Skills Development,' and later in 2014 with the Korea International Cooperation Agency (KOICA), the lyceum significantly strengthened its international partnerships and improved its facilities. The academic building and dormitory were renovated. Two sewing workshops, a hairdressing salon, and a workshop for repairing complex household appliances were modernized and equipped with new technology. New materials and tools were also purchased. In 2014, Vocational Lyceum No. 94 continued its cooperation with KOICA through volunteer activities. Volunteers conducted electronics classes for students. One of the most notable aspects of the partnership with the Korean House was the significant improvement in learning conditions over three years through the efforts of volunteer Ho Je Ryu. Furniture and equipment worth more than USD 20,000 were purchased, and renovation work was completed. Another volunteer, Ro Kyung, provided cosmetology and makeup training for hairdressing students. In addition, five Korean university students were invited to the lyceum for five months to promote the study of the Korean language and culture. In 2023, as part of another KOICA project, the lyceum received an additional USD 20,000 in funding. These funds were used to completely renovate two classrooms, purchase 26 personal computers, televisions, and various technical equipment. As a result, the Information Technology Training Center was established at the lyceum. The institution also obtained a license to provide vocational education in Information Technology and began admitting students to IT-related programs. Since 2024, the lyceum has returned to a two-year educational system and started admitting students after both the 9th and 11th grades. Students enrolling after the 9th grade now have the opportunity to earn both a vocational qualification and a nationally recognized secondary school diploma upon graduation. Throughout its history, Vocational Lyceum No. 94 has remained focused on preparing students for modern professions that are in high demand in the labor market. Today, approximately 250 students are enrolled in programs in the service sector, including household appliance repair technician, hairdresser, pattern maker and tailor, and seamstress. The lyceum also offers Information Technology programs, including Graphic Design, Web Development, and System Administration.",
+    "more": "History of the Establishment and Development of the Educational Institution",
+    "next": "Read More",
+    "prev": "Hide"
+  },
+  "professionPage": {
+    "studentAcquire": "What skills will the student acquire?",
+    "durationStudy": "Duration of study",
+    "shortCourseTitle": "Short-term courses:",
+    "shortDurationTitle": "Course duration:",
+    "apply": "Apply",
+    "back": "Back ←"
+  },
+  "modal": {
+    "title": "Admission Form",
+    "base": "Education level:",
+    "choose": "Select...",
+    "base9": "After Grade 9",
+    "base11": "After Grade 11",
+    "profession": "Choose a profession:",
+    "chooseProfession": "Select a profession...",
+    "graphicDesigner": "Graphic Designer",
+    "webDeveloper": "Web Developer",
+    "barber": "Hairdresser",
+    "repair": "Home Appliance Repair Technician",
+    "sewing": "Tailor",
+    "systemAdmin": "System Administrator",
+    "fullname": "Student's Full Name:",
+    "fullnamePlaceholder": "Enter your full name...",
+    "phone": "Phone Number:",
+    "submit": "Submit Application"
+  },
+  "news": {
+    "title": "News"
   }
 }

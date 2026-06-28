@@ -9,8 +9,7 @@ import rus from './image/rus.svg';
 import usa from './image/swa.svg';
 import { usePathname, useRouter } from "next/navigation";
 import { useTranslations } from 'next-intl';
-import { useLocale } from 'next-intl';
-
+import { useLocale } from "next-intl";
 export default function Header() {
   const t = useTranslations();
   const navItems = [
@@ -41,7 +40,7 @@ export default function Header() {
   ];
   const router = useRouter();
   const pathname = usePathname();
-  // const locale = useLocale();
+  const locale = useLocale();
   const [active, setActive] = useState('home');
   const [menuOpen, setMenuOpen] = useState(false);
   const [showHeader, setShowHeader] = useState(true);
@@ -50,6 +49,7 @@ export default function Header() {
   const [showAdminModal, setShowAdminModal] = useState(false);
   const [adminCode, setAdminCode] = useState("");
   const [codeError, setCodeError] = useState(false);
+
   const changeLanguage = (newLocale: string) => {
     const segments = pathname.split('/');
 
@@ -71,7 +71,7 @@ export default function Header() {
       setLogoClicks(0);
     }, 2000);
   };
-  useEffect(() => { 
+  useEffect(() => {
     const controlHeader = () => {
       const currentScrollY = window.scrollY;
 
@@ -265,16 +265,18 @@ export default function Header() {
               <button
                 key={item.id}
                 onClick={() => {
-                  setActive(item.id);
-
                   const section = document.getElementById(item.id);
 
                   if (section) {
                     section.scrollIntoView({
-                      behavior: 'smooth',
-                      block: 'start',
+                      behavior: "smooth",
+                      block: "start",
                     });
+                  } else {
+                    router.push(`/${locale}/#${item.id}`);
                   }
+
+                  setMenuOpen(false);
                 }}
                 className="
                   relative

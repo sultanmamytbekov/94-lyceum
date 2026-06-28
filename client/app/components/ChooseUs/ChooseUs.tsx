@@ -10,18 +10,22 @@ export default function ChooseUs() {
     {
       title: t("card1.title"),
       text: t("card1.text"),
+      className: "min-h-[335px]",
     },
     {
       title: t("card2.title"),
       text: t("card2.text"),
+      className: "min-h-[195px]",
+    },
+    {
+      title: t("card4.title"), // специально раньше card3
+      text: t("card4.text"),
+      className: "min-h-[195px]",
     },
     {
       title: t("card3.title"),
       text: t("card3.text"),
-    },
-    {
-      title: t("card4.title"),
-      text: t("card4.text"),
+      className: "min-h-[335px] mt-0 lg:mt-[-135px]",
     },
   ];
 
@@ -30,75 +34,73 @@ export default function ChooseUs() {
       className="relative w-full overflow-hidden bg-[#f5f5f5] py-10 md:py-14"
       style={{
         backgroundImage: `url(${beg.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
       <div className="relative z-10 mx-auto w-full max-w-[1280px] px-4 sm:px-6 lg:px-10">
         {/* Title */}
         <h2
           className="
-            text-center
-            text-[#003B8F]
-            font-normal
-            text-[28px]
-            sm:text-[34px]
-            md:text-[42px]
-            leading-tight
-            mb-10
-          "
-
+    text-center
+    text-[#003B8F]
+    text-[30px]
+    sm:text-[36px]
+    md:text-[44px]
+    font-medium
+    mb-14
+  "
         >
           {t("title")}
         </h2>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-14">
+        {/* Cards */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-x-10 lg:gap-y-8 items-start">
           {items.map((item, index) => (
-            <div key={index} className="relative">
-              {/* Divider Line */}
-              {index >= 2 && (
-                <div className="hidden md:block absolute -top-5 left-1/2 -translate-x-1/2 w-[85%] h-[1px] bg-[#cfcfcf]" />
-              )}
-
+            <div key={index}>
               <div
-                className="
-                  bg-white/95
-                  rounded-[32px]
-                  shadow-[0_8px_24px_rgba(0,0,0,0.12)]
-                  px-6
-                  sm:px-8
-                  py-7
-                  min-h-[180px]
-                  flex
-                  flex-col
-                  justify-start
-                "
+                className={`
+  bg-white
+  rounded-[38px]
+  shadow-[0_6px_25px_rgba(0,0,0,0.06),0_22px_55px_rgba(0,0,0,0.10)]
+  px-8
+  py-7
+  ${item.className}
+          transition-all
+          duration-300
+          hover:-translate-y-1
+  hover:shadow-[0_6px_25px_rgba(0,0,0,0.06),0_22px_55px_rgba(0,0,0,0.10)]
+`}
               >
-                <h3
-                  className="
-                    text-[#003B8F]
-                    text-[24px]
-                    sm:text-[28px]
-                    leading-tight
-                    mb-3
-                    flex
-                    items-start
-                    gap-2
-                  "
+                <h3 className="flex items-start gap-3 mb-5">
+                  <span className="text-black text-[18px] leading-none mt-2">
+                    •
+                  </span>
 
-                >
-                  <span style={{ color: "black" }}>•</span>
-                  <span>{item.title}</span>
+                  <span
+                    className="
+              text-[#003B8F]
+              text-[24px]
+              sm:text-[28px]
+              font-medium
+              leading-tight
+            "
+                  >
+                    {item.title}
+                  </span>
                 </h3>
 
                 <p
                   className="
-                    text-[#4B4B4B]
-                    text-[16px]
-                    sm:text-[18px]
-                    leading-[1.35]
-                    whitespace-pre-line
-                    pl-5
-                  "
+            pl-6
+            whitespace-pre-line
+            text-[#5C5C5C]
+            text-[16px]
+            sm:text-[17px]
+            leading-7
+          "
                 >
                   {item.text}
                 </p>

@@ -5,11 +5,12 @@ import { useState } from 'react';
 import logo from './image/Group 18.png'; // логотип
 import heroBg from './image/beg.png'; // задний фон
 import { useTranslations } from 'next-intl';
-
+import { useRouter } from "next/navigation";
 export default function Hero() {
   const [isOpen, setIsOpen] = useState(false);
   const t = useTranslations();
-
+  const ts = useTranslations('modal');
+  const router = useRouter();
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
@@ -158,6 +159,16 @@ export default function Hero() {
               style={{
                 // fontFamily: 'Nanum Myeongjo',
               }}
+              onClick={() => {
+                const section = document.getElementById("professions");
+
+                if (section) {
+                  section.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }
+              }}
             >
               {t('hero.details')}
             </button>
@@ -230,7 +241,7 @@ export default function Hero() {
 
               {/* TITLE */}
               <h2 className="text-center text-[30px] font-[700] text-black">
-                Форма поступления
+                {ts("title")}
               </h2>
 
               <form
@@ -240,7 +251,7 @@ export default function Hero() {
                 {/* SELECT STYLE */}
                 <div>
                   <label className="mb-[10px] block text-[15px] text-[#666]">
-                    Основа поступления:
+                    {ts("base")}:
                   </label>
 
                   <div className="relative">
@@ -263,9 +274,9 @@ export default function Hero() {
                   shadow-[inset_0_1px_2px_rgba(255,255,255,0.45),0_4px_14px_rgba(0,0,0,0.08)]
                 "
                     >
-                      <option value="">Выберите...</option>
-                      <option value="9">На базе 9 класса</option>
-                      <option value="11">На базе 11 класса</option>
+                      <option value="">{ts("choose")}</option>
+                      <option value="9">{ts("base9")}</option>
+                      <option value="11">{ts("base11")}</option>
                     </select>
 
                     {/* ARROW */}
@@ -297,7 +308,7 @@ export default function Hero() {
                 {/* PROFESSION */}
                 <div>
                   <label className="mb-[10px] block text-[15px] text-[#666]">
-                    Выберите профессию:
+                    <label>{ts("profession")}</label>:
                   </label>
 
                   <div className="relative">
@@ -320,9 +331,13 @@ export default function Hero() {
                   shadow-[inset_0_1px_2px_rgba(255,255,255,0.45),0_4px_14px_rgba(0,0,0,0.08)]
                 "
                     >
-                      <option value="">Выберите профессию...</option>
-                      <option value="it">IT</option>
-                      <option value="design">Дизайн</option>
+                      <option value="">{ts("chooseProfession")}</option>
+                      <option value="graphic-designer">{ts("graphicDesigner")}</option>
+                      <option value="web-developer">{ts("webDeveloper")}</option>
+                      <option value="barber">{ts("barber")}</option>
+                      <option value="repair">{ts("repair")}</option>
+                      <option value="sewing">{ts("sewing")}</option>
+                      <option value="system-admin">{ts("systemAdmin")}</option>
                     </select>
 
                     <div
@@ -353,13 +368,13 @@ export default function Hero() {
                 {/* NAME */}
                 <div>
                   <label className="mb-[10px] block text-[15px] text-[#666]">
-                    ФИО студента:
+                    {ts("fullname")}:
                   </label>
 
                   <input
                     type="text"
                     name="fullname"
-                    placeholder="Ваше полное имя..."
+                    placeholder={ts("fullnamePlaceholder")}
                     required
                     className="
                 w-full
@@ -381,7 +396,7 @@ export default function Hero() {
                 {/* PHONE */}
                 <div>
                   <label className="mb-[10px] block text-[15px] text-[#666]">
-                    Номер телефона:
+                    {ts("phone")}:
                   </label>
 
                   <input
@@ -440,7 +455,7 @@ export default function Hero() {
   "
                 >
                   <span className="relative z-10">
-                    Отправить заявку
+                    {ts("submit")}
                   </span>
 
                   {/* glow */}

@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
 export const newsApi = createApi({
   reducerPath: "newsApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://69b1accaadac80b427c5f205.mockapi.io/"
+    baseUrl: "https://6a417d821ff1d27becc192ae.mockapi.io/"
   }),
   tagTypes: ["News"],
   endpoints: (builder) => ({
@@ -11,13 +11,13 @@ export const newsApi = createApi({
       query: (id) => `/news/${id}`,
     }),
     getAllNews: builder.query<any[], void>({
-      query: () => "sultanBase",
+      query: () => "94_Litseu",
       providesTags: ["News"]
     }),
 
     addNews: builder.mutation({
       query: (body) => ({
-        url: "sultanBase",
+        url: "94_Litseu",
         method: "POST",
         body
       }),
@@ -26,7 +26,7 @@ export const newsApi = createApi({
 
     editNews: builder.mutation({
       query: ({ id, form }) => ({
-        url: `sultanBase/${id}`,
+        url: `94_Litseu/${id}`,
         method: "PUT",
         body: form
       }),
@@ -35,7 +35,7 @@ export const newsApi = createApi({
 
     deleteNews: builder.mutation({
       query: ({ id }) => ({
-        url: `sultanBase/${id}`,
+        url: `94_Litseu/${id}`,
         method: "DELETE"
       }),
       invalidatesTags: ["News"]

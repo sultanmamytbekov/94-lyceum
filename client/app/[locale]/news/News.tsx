@@ -7,12 +7,14 @@ import { useState, useMemo } from "react";
 import Header from "@/app/components/Header/Header";
 import beg from "../../components/ChooseUs/image/mainLogo2.png";
 import { useParams } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 export default function NewsClient() {
   const router = useRouter();
   const { isLoading, data } = useGetAllNewsQuery();
   const params = useParams();
   const [selectedEvent, setSelectedEvent] = useState("Все");
+  const t = useTranslations("news");
 
   const events = useMemo(() => {
     if (!data) return [];
@@ -51,7 +53,7 @@ export default function NewsClient() {
                 mb-6
               "
             >
-              Новости
+              {t('title')}
             </h1>
 
             {/* Фильтры */}

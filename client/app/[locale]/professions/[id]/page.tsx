@@ -18,11 +18,15 @@ export default async function ProfessionPage({
     const profession = professions.find(
         (item) => item.id === paramsData.id
     );
-    const t = await getTranslations("professionPage");
 
     if (!profession) {
         return notFound();
     }
+
+    const key = profession.translationKey;
+
+    const t = await getTranslations("professionPage");
+    const tp = await getTranslations("professionData");
     return (
         <>
             <section
@@ -33,14 +37,14 @@ export default async function ProfessionPage({
                     {/* desktop bg */}
                     <Image
                         src={profession.background}
-                        alt={profession.title}
+                        alt={tp(`${key}.title`)}
                         fill
                         priority
                         className="hidden md:block object-cover scale-107 blur-[10px] brightness-[0.45]" />
                     {/* mobile bg */}
                     <Image
                         src={profession.mobileBackground}
-                        alt={profession.title}
+                        alt={tp(`${key}.title`)}
                         fill
                         priority
                         className="block md:hidden object-cover scale-104 blur-[6px]brightness-[0.55]"
@@ -55,7 +59,7 @@ export default async function ProfessionPage({
 
                     {/* TITLE */}
                     <h1 className=" text-center text-white font-extrabold leading-[100%] text-[32px] md:text-[62px] tracking-[-2px] drop-shadow-[0_6px_25px_rgba(0,0,0,0.65)]">
-                        {profession.title.replace("\n", " ")}
+                        {tp(`${key}.title`).replace("\n", " ")}
                     </h1>
 
                     {/* CONTENT */}
@@ -86,7 +90,7 @@ export default async function ProfessionPage({
                                 {/* CONTENT */}
                                 <div className="px-[22px] py-[20px]">
                                     <ul className="space-y-[6px]">
-                                        {profession.skills.map((skill) => (
+                                        {tp.raw(`${key}.skills`).map((skill: string) => (
                                             <li
                                                 key={skill}
                                                 className=" text-[16px] md:text-[18px] text-black leading-[120%]"
@@ -120,13 +124,13 @@ export default async function ProfessionPage({
 
                                     {/* CONTENT */}
                                     <div className="px-[22px] py-[20px]">
-                                        {profession.description.map((skill) => (
+                                        {tp.raw(`${key}.duration`).map((item: string) => (
                                             <p
                                                 className=" mt-4 text-[22px] md:text-[22px] leading-[145%] text-black"
-                                                key={skill}
+                                                key={item}
 
                                             >
-                                                • {skill}
+                                                • {item}
                                             </p>
                                         ))}
                                     </div>
@@ -141,7 +145,7 @@ export default async function ProfessionPage({
 
                         <img
                             src={profession.image1.src}
-                            alt={profession.title}
+                            alt={tp(`${key}.title`)}
                             className="relative hidden xl:block w-full max-w-[750px] rounded-[34px] overflow-hidden"
                         />
 
@@ -154,13 +158,19 @@ export default async function ProfessionPage({
                             <div className="border-r border-white/20">
                                 <div className="h-[48px] md:h-[62px] flex items-center justify-center px-3 md:px-6 bg-[#d7d7d8]">
                                     <h3 className="text-[16px] md:text-[20px] text-black font-extrabold text-center leading-tight">
-                                        Краткосрочные курсы:
+                                        {t("shortCourseTitle")}:
                                     </h3>
                                 </div>
                                 <div className="px-3 md:px-6 py-3 md:py-5">
-                                    <p className="text-[15px] md:text-[18px] text-black leading-tight">
-                                        • Разработчик Веб-сайта
-                                    </p>
+                                    {tp.raw(`${key}.shortCourse`).map((item: string) => (
+                                        <p
+                                            className=" mt-4 text-[22px] md:text-[22px] leading-[145%] text-black"
+                                            key={item}
+
+                                        >
+                                            • {item}
+                                        </p>
+                                    ))}
                                 </div>
                             </div>
 
@@ -168,14 +178,20 @@ export default async function ProfessionPage({
                             <div>
                                 <div className="h-[48px] md:h-[62px] flex items-center justify-center px-3 md:px-6 bg-[#d7d7d8]">
                                     <h3 className="text-[16px] text-black md:text-[20px] font-extrabold text-center leading-tight">
-                                        Срок обучения:
+                                        {t("shortDurationTitle")}:
                                     </h3>
                                 </div>
 
                                 <div className="px-3 md:px-6 py-3 md:py-5">
-                                    <p className="text-[15px] md:text-[18px] text-black leading-tight">
-                                        • 5 месяца
-                                    </p>
+                                    {tp.raw(`${key}.shortDuration`).map((item: string, index:number) => (
+                                        <p
+                                            className=" mt-4 text-[22px] md:text-[22px] leading-[145%] text-black"
+                                            key={index}
+
+                                        >
+                                            • {item}
+                                        </p>
+                                    ))}
                                 </div>
                             </div>
 

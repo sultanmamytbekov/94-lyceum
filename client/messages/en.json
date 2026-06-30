@@ -16,7 +16,7 @@
     "title": "Why Choose Us?",
     "card1": {
       "title": "Free Education",
-      "text": "Applicants admitted after Grade 9 study for 2 years and receive a secondary education certificate together with a state-recognized diploma.\n\nApplicants admitted after Grade 11 study for 10 months and receive a state-recognized diploma."
+      "text": "Applicants admitted after Grade 9 study for 2 years (based on 9th-grade education) and receive a secondary education certificate together with a state-recognized diploma.\n\nApplicants admitted after Grade 11 study for 10 months (based on 11th-grade education) and receive a state-recognized diploma."
     },
     "card2": {
       "title": "Free Accommodation",
@@ -114,5 +114,145 @@
   },
   "news": {
     "title": "News"
+  },
+  "professionData": {
+    "graphicDesigner": {
+      "title": "What does a Graphic Designer do?",
+      "duration": [
+        "2 years (based on 9th-grade education)"
+      ],
+      "skills": [
+        "Logo and brand identity design (branding);",
+        "Design of banners, brochures, business cards, and posters (print design);",
+        "Image editing and graphic design;",
+        "Selection of color palettes and typography (fonts);",
+        "Creating social media posts and advertising creatives (SMM design);",
+        "UI/UX design for websites and mobile applications;",
+        "Confident use of Adobe Photoshop, Illustrator, and CorelDRAW."
+      ],
+      "shortCourse": [
+        "Graphic Designer",
+        "Computer User"
+      ],
+      "shortDuration": [
+        "2 months",
+        "3 months"
+      ]
+    },
+    "webDeveloper": {
+      "title": "What does a Web Developer do?",
+      "duration": [
+        "2 years (based on 9th-grade education)"
+      ],
+      "skills": [
+        "Website and web application development;",
+        "Design and development of web page interfaces;",
+        "Working with servers and databases;",
+        "Finding and fixing website errors;",
+        "Improving website speed and security;",
+        "Adapting websites for mobile devices;",
+        "Adding new features and maintaining websites;"
+      ],
+      "shortCourse": [
+        "Website Developer"
+      ],
+      "shortDuration": [
+        "5 months"
+      ]
+    },
+    "barber": {
+      "title": "What does a Hairdresser do?",
+      "duration": [
+        "2 years (based on 9th-grade education)",
+        "10 months (based on 11th-grade education)"
+      ],
+      "skills": [
+        "Women's, men's, and children's haircuts;",
+        "Hair coloring;",
+        "Modern coloring techniques (ombre, shatush, balayage, highlights, contouring, airtouch);",
+        "Hair styling and hairstyle modeling;",
+        "Hair perming;",
+        "Hair care;",
+        "Hair braiding techniques;"
+      ],
+      "shortCourse": [
+        "Hairdresser",
+        "Make-up Artist",
+        "Nail Technician",
+        "Men's Barber"
+      ],
+      "shortDuration": [
+        "3–6 months",
+        "Up to 2 months",
+        "2 months",
+        "Up to 2 months"
+      ]
+    },
+    "repair": {
+      "title": "What does a Home Appliance Repair Technician do?",
+      "duration": [
+        "2 years (based on 9th-grade education)",
+        "10 months (based on 11th-grade education)"
+      ],
+      "skills": [
+        "Repair of household appliances (kettles, irons, vacuum cleaners, air conditioners, washing machines, stoves, etc.);",
+        "Refrigerator repair;",
+        "Diagnostics, repair, and maintenance of household appliances;"
+      ],
+      "shortCourse": [
+        "Refrigeration Equipment Repair Technician"
+      ],
+      "shortDuration": [
+        "3 months"
+      ]
+    },
+    "sewing": {
+      "title": "What does a Seamstress/Tailor do?",
+      "duration": [
+        "2 years (based on 9th-grade education)",
+        "10 months (based on 11th-grade education)"
+      ],
+      "skills": [
+        "Pattern making and garment cutting basics;",
+        "Working with industrial and household sewing equipment;",
+        "Sewing casual and formal clothing;",
+        "Knowledge of fabrics and sewing accessories;",
+        "Clothing alteration and repair;"
+      ],
+      "shortCourse": [
+        "Seamstress",
+        "Tailor",
+        "Fabric Cutter",
+        "Sewing Equipment Repair Technician"
+      ],
+      "shortDuration": [
+        "1.5–3 months",
+        "3 months",
+        "2 months",
+        "3 months"
+      ]
+    },
+    "systemAdmin": {
+      "title": "Who is a System Administrator?",
+      "duration": [
+        "2 years (based on 9th-grade education)"
+      ],
+      "skills": [
+        "Installation and configuration of computers and operating systems (Windows, Linux);",
+        "Design, setup, and administration of computer networks;",
+        "Installation, configuration, and maintenance of servers;",
+        "Internet and Wi-Fi network configuration;",
+        "Data protection and backup creation;",
+        "Software installation and updates;",
+        "Diagnostics and troubleshooting of technical issues;",
+        "Technical support and user assistance;"
+      ],
+      "shortCourse": [
+        "System Administrator"
+      ],
+      "shortDuration": [
+        "3 months"
+      ]
+    }
   }
 }

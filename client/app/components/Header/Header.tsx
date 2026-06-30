@@ -560,15 +560,15 @@ export default function Header() {
                 <button
                   key={item.id}
                   onClick={() => {
-                    setActive(item.id);
-
                     const section = document.getElementById(item.id);
 
                     if (section) {
                       section.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start',
+                        behavior: "smooth",
+                        block: "start",
                       });
+                    } else {
+                      router.push(`/${locale}/#${item.id}`);
                     }
 
                     setMenuOpen(false);

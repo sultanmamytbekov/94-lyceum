@@ -155,7 +155,7 @@ export default function ProfessionSection() {
                       paintOrder: "stroke fill",
                     }}
                   >
-                    {(item.titleBlock.title)}
+                    {t(`${item.translationKey}.title`)}
                   </h3>
                 </div>
 
@@ -173,7 +173,7 @@ export default function ProfessionSection() {
                 >
                   <Image
                     src={item.image}
-                    alt={item.title}
+                    alt={t(`${item.translationKey}.title`)}
                     fill
                     className="object-cover w-[281px] h-[300px]"
                   />
